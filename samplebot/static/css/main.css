@@ -1,0 +1,471 @@
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {
+  height: 100vh;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #cccccc;
+  height: 100%;
+  padding: 0;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+
+  .row.content {
+    height: auto;
+  }
+}
+
+/* my styles */
+
+/* all page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.samplebot .sidenav li.active a {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.samplebot .sidenav li a span.user-del {
+  font-size: 15px;
+  font-weight: 100;
+  float: right;
+  padding: 10px 20px;
+}
+
+.samplebot .sidenav li a span.user-del:hover {
+  color: red;
+}
+
+.samplebot .well {
+  margin: 0;
+}
+
+.flex-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.samplebot-content button {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  color: #ffffff;
+  border: 0;
+  outline: 0;
+}
+
+.samplebot-content input {
+  border-radius: 10px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.btn:focus, .btn:hover {
+  color: #ffffff;
+  outline: 0 !important;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+/* sub elements */
+.samplebot .sidenav {
+  display: block;
+  position: relative;
+}
+.samplebot .sidenav h3 {
+  background-color: #cccccc;
+  border: 1px solid #111111;
+  margin: 0;
+  padding: 30px;
+  font-weight: bold;
+}
+
+.samplebot .sidenav ul {
+  margin: 0;
+}
+
+.samplebot .sidenav ul li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #111111;
+}
+
+.samplebot .sidenav ul li a {
+  border: 0;
+  margin: 0;
+  padding: 20px;
+  background: none;
+  font-size: 20px;
+  color: #111111;
+}
+
+.samplebot .sidenav ul li a:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.samplebot .sidenav .add_account_button {
+  display: block;
+  position: absolute;
+  background-color: #cccccc;
+  border: 1px solid #111111;
+  margin: 0;
+  padding: 20px;
+  bottom: 0;
+  font-weight: bold;
+  width: 100%;
+}
+
+.samplebot .samplebot-content {
+  padding: 4vh 2%;
+}
+
+.samplebot .samplebot-content .settings-div {
+  padding: 30px 40px;
+  border: 1px solid #111111;
+  border-radius: 5px;
+  margin: 0 20px;
+  height: 92vh;
+  overflow: overlay;
+}
+
+.samplebot .samplebot-content .settings-div .start-account-div,
+.samplebot .samplebot-content .userlist-div .whitelist-account-div,
+.samplebot .samplebot-content .userlist-div .blacklist-account-div {
+  margin: 30px 0;
+}
+.samplebot .samplebot-content .settings-div .start-account-div .start-account-add-div {
+  width: 70%;
+}
+
+.samplebot .samplebot-content .settings-div .start-account-div .start-account-add-div input {
+  margin-right: 10px;
+}
+
+.userlist-box {
+  clear: both;
+  display: table;
+  list-style: none;
+  content: '';
+  margin-top: 10px;
+  max-height: 10vh;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  display: block;
+}
+
+.userlist-box li {
+  float: left;
+  margin: 10px 10px 0px 0;
+  padding: 5px 10px;
+  background-color: #cccccc;
+  border-radius: 10px;
+}
+
+.userlist-box li span {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.userlist-box li span:hover {
+  color: red;
+}
+
+.samplebot .samplebot-content .settings-div .follow-settings .day-select {
+  margin: 20px 0;
+  display: flex;
+  padding-left: 10px;
+}
+.samplebot .samplebot-content .settings-div .follow-settings .day-select label {
+  width: 25%;
+}
+.samplebot .samplebot-content .settings-div .follow-settings .day-select label {
+  width: 25%;
+  font-size: 110%;
+}
+
+.samplebot .samplebot-content .settings-div .follow-settings .day-select .checkbox {
+  display: inline;
+  cursor: pointer;
+}
+
+.samplebot .samplebot-content .settings-div .follow-settings .day-select .checkbox:focus {
+  background-color: green;
+}
+
+.samplebot .samplebot-content .settings-div .follow-settings .day-select span {
+  display: block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.samplebot .samplebot-content .settings-div #runBot,
+.samplebot .samplebot-content .settings-div #stopBot {
+  /* position: absolute; */
+  margin: 20px auto;
+  padding: 10px 20px;
+  width: 70%;
+  text-align: center;
+}
+
+.samplebot .samplebot-content .settings-div #runBot {
+  background-color: #5bc0de;
+}
+
+.samplebot .samplebot-content .settings-div #stopBot {
+  background-color: #3a3b3c;
+}
+
+.follow-amount-input, .follow-every-input, .unfollow-amount-input, .unfollow-every-input {
+  width: 50%;
+}
+
+.samplebot .samplebot-content .userlist-div {
+  margin: 0 20px;
+  height: 92vh;
+}
+.samplebot .samplebot-content .userlist-div .whitelist-div {
+  border: 1px solid #111111;
+  border-radius: 5px;
+  margin-bottom: 2vh;
+  height: 45vh;
+  padding: 30px 40px;
+}
+
+.samplebot .samplebot-content .userlist-div .whitelist-account-div,
+.samplebot .samplebot-content .userlist-div .blacklist-account-div {
+  margin-bottom: 10px;
+}
+
+.samplebot .samplebot-content .userlist-div .whitelist-account-div .whitelist-account-add-div,
+.samplebot .samplebot-content .userlist-div .blacklist-account-div .blacklist-account-add-div {
+  width: 50%;
+}
+
+.samplebot .samplebot-content .userlist-div .whitelist-account-div input,
+.samplebot .samplebot-content .userlist-div .blacklist-account-div input {
+  margin-right: 10px;
+}
+
+.samplebot .samplebot-content .userlist-div .blacklist-div {
+  border: 1px solid #111111;
+  border-radius: 5px;
+  margin-top: 2vh;
+  height: 45vh;
+  padding: 30px 40px;
+}
+
+
+/* modal */
+#add_account_modal .modal-dialog {
+  margin: 25vh auto;
+}
+
+#add_account_modal .modal-content {
+  width: 50vh;
+  height: 50vh;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 2vh;
+}
+#add_account_modal .modal-content .modal-header {
+  height: 10vh;
+  padding: 3vh 0;
+  border-color:#888;
+  border-width: 2px;
+}
+
+#add_account_modal .modal-content .modal-body {
+  height: 26vh;
+  padding: 4vh 20%;
+}
+
+#add_account_modal .modal-content .modal-body input {
+  margin: 2vh 0 4vh 0;
+  height: 6vh;
+  border-radius: 20px;
+}
+
+#add_message {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+  height: 2vh;
+}
+
+#add_account_modal .modal-content .modal-footer {
+  height: 10vh;
+  text-align: center;
+  border: 0;
+}
+#add_account_modal .modal-content .modal-footer button {
+  width: 35%;
+  padding: 1vh 5%;
+  border-radius: 20px;
+  background-color: #111111;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+/* checkbox */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* time picker */
+.timerangepicker-container {
+  display:flex;
+  position: absolute;
+  z-index: 99;
+  background: azure;
+}
+.timerangepicker-label {
+  display: block;
+  line-height: 2em;
+  background-color: #c8c8c880;
+  padding-left: 1em;
+  border-bottom: 1px solid grey;
+  margin-bottom: 0.75em;
+}
+
+.timerangepicker-from,
+.timerangepicker-to {
+  border: 1px solid grey;
+  padding-bottom: 0.75em;
+}
+.timerangepicker-from {
+  border-right: none;
+}
+.timerangepicker-display {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  border: 1px solid grey;
+  line-height: 2.5em;
+  text-align: center;
+  position: relative;
+  margin: 1em 0.175em;
+}
+.timerangepicker-display .increment,
+.timerangepicker-display .decrement {
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.5em;
+  width: 1.5em;
+  text-align: center;
+  left: 0;
+}
+
+.timerangepicker-display .increment {
+  margin-top: -0.25em;
+  top: -1em;
+}
+
+.timerangepicker-display .decrement {
+  margin-bottom: -0.25em;
+  bottom: -1em;
+}
+
+.timerangepicker-display.hour {
+  margin-left: 1em;
+}
+.timerangepicker-display.period {
+  margin-right: 1em;
+}

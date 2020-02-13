@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>samplebot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+  <link rel="stylesheet" href="/static/css/main.css">
+
+</head>
+
+<body>
+
+  <div class="container-fluid samplebot">
+    <div class="row content">
+      <div class="col-md-3 col-sm-4 col sidenav">
+        <h3 class="text-center well">ACCOUNTS</h3>
+        <ul class="nav nav-pills nav-stacked userlist">
+        </ul><br>
+        <button type="button" class="btn btn-default add_account_button well">
+          <h4>ADD ACCOUNT</h4>
+        </button>
+      </div>
+
+      <div class="col-md-9 col-sm-8 samplebot-content">
+        <div class="col-md-4 col-sm-12 settings-div">
+          <form id="settings_form">
+            <h3>SETTINGS</h3>
+            <div class="start-account-div">
+              <div class="start-account-add-div flex-wrap ">
+                <input type="text" class="form-control start-account-add-input">
+                <button type="button" class="btn start-account-add-btn">ADD</button>
+              </div>
+              <ul class="start-account-list-div userlist-box">
+              </ul>
+            </div>
+            <h3 class="text-bold">FOLLOW</h3>
+            <div class="follow-settings">
+              <div class="day-select">
+                <label class="checkbox-inline">
+                  <input type="checkbox" class="follow-monday follow-checkbox checkbox" name="follow-checkbox-Ma">
+                  <span>M</span>
+                </label>
+                <label class="checkbox-inline"><input type="checkbox" name="follow-checkbox-Tu"
+                    class="follow-tuesday follow-checkbox checkbox"><span>T</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="follow-checkbox-We"
+                    class="follow-wednsday follow-checkbox checkbox"><span>W</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="follow-checkbox-Th"
+                    class="follow-thursday follow-checkbox checkbox"><span>T</span></label>
+              </div>
+              <div class="day-select">
+                <label class="checkbox-inline"><input type="checkbox" name="follow-checkbox-Fr"
+                    class="follow-friday follow-checkbox checkbox"><span>F</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="follow-checkbox-Sa"
+                    class="follow-saturday follow-checkbox checkbox"><span>S</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="follow-checkbox-Su"
+                    class="follow-sunday follow-checkbox checkbox"><span>S</span></label>
+                <label class="checkbox-inline"><input type="hidden" class=""></label>
+              </div>
+              <div class="form-group flex-wrap follow-amount">
+                <label for="usr" class="col-md-3">AMOUNT:</label>
+                <input type="text" class="form-control col-md-6 follow-amount-input digital-only" name="follow-amount">
+                <span class="col-md-3">ACCOUNTS</span>
+              </div>
+              <div class="form-group flex-wrap follow-every">
+                <label for="usr" class="col-md-3">EVERY:</label>
+                <input type="text" class="col-md-6 form-control follow-every-input digital-only" name="follow-every">
+                <span class="col-md-3">HRS</span>
+              </div>
+              <div id="datetimepickerDate1" class="input-group timerange">
+                <input class="form-control follow-time time-set" type="text">
+                <span class="input-group-addon">
+                  <i aria-hidden="true" class="fa fa-calendar"></i>
+                </span>
+              </div>
+            </div>
+            <hr>
+            <h3 class="text-bold">UNFOLLOW</h3>
+            <div class="follow-settings">
+              <div class="day-select">
+                <label class="checkbox-inline"><input type="checkbox" name="unfollow-checkbox-Ma"
+                    class="unfollow-monday unfollow-checkbox checkbox"><span>M</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="unfollow-checkbox-Tu"
+                    class="unfollow-tuesday unfollow-checkbox checkbox"><span>T</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="unfollow-checkbox-We"
+                    class="unfollow-wednsday unfollow-checkbox checkbox"><span>W</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="unfollow-checkbox-Th"
+                    class="unfollow-thursday unfollow-checkbox checkbox"><span>T</span></label>
+              </div>
+              <div class="day-select">
+                <label class="checkbox-inline"><input type="checkbox" name="unfollow-checkbox-Fr"
+                    class="unfollow-friday unfollow-checkbox checkbox"><span>F</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="unfollow-checkbox-Sa"
+                    class="unfollow-saturday unfollow-checkbox checkbox"><span>S</span></label>
+                <label class="checkbox-inline"><input type="checkbox" name="unfollow-checkbox-Su"
+                    class="unfollow-sunday unfollow-checkbox checkbox"><span>S</span></label>
+                <label class="checkbox-inline"><input type="hidden" class=""></label>
+              </div>
+              <div class="form-group flex-wrap follow-amount">
+                <label for="usr" class="col-md-3">AMOUNT:</label>
+                <input type="text" class="form-control col-md-6 unfollow-amount-input digital-only" name="unfollow-amount">
+                <span class="col-md-3">ACCOUNTS</span>
+              </div>
+              <div class="form-group flex-wrap follow-every">
+                <label for="usr" class="col-md-3">EVERY:</label>
+                <input type="text" class="col-md-6 form-control unfollow-every-input digital-only" name="unfollow-every">
+                <span class="col-md-3">HRS</span>
+              </div>
+              <div id="datetimepickerDate2" class="input-group timerange">
+                <input class="form-control unfollow-time time-set" type="text">
+                <span class="input-group-addon">
+                  <i aria-hidden="true" class="fa fa-calendar"></i>
+                </span>
+              </div>
+            </div>
+            <button type="button" class='btn-block btn-info' id="runBot">RUN</button>
+            <button type="button" class='btn-block btn-info' id="stopBot">PAUSE</button>
+          </form>
+        </div>
+        <div class="col-md-7 col-sm-12 userlist-div">
+          <div class="whitelist-div">
+            <h3>WHITELIST</h3>
+            <div class="whitelist-account-div">
+              <div class="whitelist-account-add-div flex-wrap">
+                <input type="text" class="form-control whitelist-account-input">
+                <button type="button" class="btn whitelist-account-add-btn">ADD</button>
+              </div>
+            </div>
+            <ul class="whitelist-account-list-div userlist-box">
+
+            </ul>
+          </div>
+          <div class="blacklist-div">
+            <h3>BLACKLIST</h3>
+            <div class="blacklist-account-div">
+              <div class="blacklist-account-add-div flex-wrap ">
+                <input type="text" class="form-control blacklist-account-input">
+                <button type="button" class="btn blacklist-account-add-btn">ADD</button>
+              </div>
+            </div>
+            <ul class="blacklist-account-list-div userlist-box">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="add_account_modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title text-bold">ADD ACCOUNT</h3>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="add_username" class="form-control add_username" placeholder="username">
+          <input type="password" id="add_password" class="form-control add_password" placeholder="password">
+        </div>
+        <p id="add_message"></p>
+        <div class="modal-footer">
+          <button type="button" id="add_account" class="btn">
+            <h4>ADD</h4>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/static/js/main.js"></script>
+
+</html>
